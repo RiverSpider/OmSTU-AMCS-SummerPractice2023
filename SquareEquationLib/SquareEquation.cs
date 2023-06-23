@@ -21,7 +21,7 @@ public class SquareEquation
         } 
         else {
             solve3[0] = -( b + Math.Sign(b)* Math.Sqrt(d) )/2;
-            solve3[1] = c/solve[0];
+            solve3[1] = c/solve3[0];
             return solve3;
         }
         
