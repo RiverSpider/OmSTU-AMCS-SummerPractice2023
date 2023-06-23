@@ -7,7 +7,7 @@ public class SquareEquation
         double[] solve1 = {};
         double[] solve2 = new double[1];
         double[] solve3 = new double[2];
-        double eps = 1e-10;
+        double eps = 1e-9;
         if (a == 0) throw new System.ArgumentException();
         if ( double.IsNaN(a) || double.IsInfinity(a) || double.IsNaN(b) || double.IsInfinity(b) || double.IsNaN(c) || double.IsInfinity(c)) throw new System.ArgumentException();
         double d = b*b-4*c*a;
