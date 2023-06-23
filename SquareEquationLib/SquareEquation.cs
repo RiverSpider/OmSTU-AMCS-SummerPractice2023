@@ -9,7 +9,7 @@ public class SquareEquation
         double d = b*b-4*c*a;
         double[] solve = new double[2];
         if (d<-Single.Epsilon) return solve;
-        else if (Single.Epsilon <= d && d <= Single.Epsilon){
+        else if (-Single.Epsilon <= d && d <= 0){
             solve[0] = -(b)/2*a;
         } 
         else {
