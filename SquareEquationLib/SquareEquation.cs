@@ -10,15 +10,17 @@ public class SquareEquation
         double eps = 1e-9;
         if (a == 0) throw new System.ArgumentException();
         if ( double.IsNaN(a) || double.IsInfinity(a) || double.IsNaN(b) || double.IsInfinity(b) || double.IsNaN(c) || double.IsInfinity(c)) throw new System.ArgumentException();
-        double d = b*b-4*c*a;
+        b = b/a;
+        c = c/a;
+        double d = b*b-4*c;
         double[] solve = new double[2];
         if (d<=-eps) return solve1;
         else if (-eps < d && d < eps){
-            solve2[0] = -(b)/2*a;
+            solve2[0] = -(b)/2;
             return solve2;
         } 
         else {
-            solve3[0] = -( b + Math.Sign(b)* Math.Sqrt(d) )/2*a ;
+            solve3[0] = -( b + Math.Sign(b)* Math.Sqrt(d) )/2;
             solve3[1] = c/solve[0];
             return solve3;
         }
