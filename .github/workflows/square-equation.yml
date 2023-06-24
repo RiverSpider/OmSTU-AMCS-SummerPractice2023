@@ -25,5 +25,8 @@ jobs:
       - name: Test
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
 
+      - name: Build
+        run: dotnet build unit-testing-using-dotnet-test
+
       - name: MyTest
         run: dotnet test --collect:"XPlat Code Coverage"
