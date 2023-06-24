@@ -13,7 +13,6 @@ public class SquareEquation
         b = b/a;
         c = c/a;
         double d = b*b-4*c;
-        double[] solve = new double[2];
         if (d<=-eps) return solve1;
         else if (-eps < d && d < eps){
             solve2[0] = -(b)/2;

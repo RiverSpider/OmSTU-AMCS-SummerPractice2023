@@ -2,7 +2,7 @@ name: square equation test
 
 on:
   push:
-    branches: ["square_equation"]
+    branches: ["square_equation", "newBranch"]
 
 jobs:
   build:
@@ -24,3 +24,6 @@ jobs:
 
       - name: Test
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
+
+      - name: MyTest
+        run: dotnet test --collect:"XPlat Code Coverage"
