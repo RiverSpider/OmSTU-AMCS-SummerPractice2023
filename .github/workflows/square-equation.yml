@@ -24,10 +24,12 @@ jobs:
 
       - name: Test
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
-      - name: install dependeces
-        run: dotnet add package coverlet.collector
+
       - name: Test Build 2
         run: dotnet build unit-testing-using-dotnet-test
 
       - name: MyTest
-        run: cd unit-testing-using-dotnet-test && dotnet test --collect:"XPlat Code Coverage"
+        run: cd unit-testing-using-dotnet-test && dotnet test
+
+      - name: Codecov
+        uses: codecov/codecov-action@v1
