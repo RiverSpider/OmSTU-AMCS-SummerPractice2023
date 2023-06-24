@@ -19,13 +19,14 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore SquareEquationLib
 
-      - name: TestBuild1
+      - name: Test Build 1
         run: dotnet build SquareEquationLib --no-restore /p:ContinuousIntegrationBuild=true
 
       - name: Test
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
-
-      - name: TestBuild2
+      - name: install dependeces
+        run: dotnet add package coverlet.collector
+      - name: Test Build 2
         run: dotnet build unit-testing-using-dotnet-test
 
       - name: MyTest
