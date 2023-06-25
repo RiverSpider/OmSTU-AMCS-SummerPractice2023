@@ -181,7 +181,6 @@ namespace Prime.UnitTests.Services
                 double a = 1000000;
                 double b = 1;
                 double c = 1;
-                double eps = 1e-3;
                 double[] q = PrimeService.Solve(a, b, c);
                 double p = q[0];
                 result = true;
