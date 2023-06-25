@@ -26,7 +26,7 @@ jobs:
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
 
       - name: Test Build 2
-        run: dotnet build unit-testing-using-dotnet-test 
+        run: dotnet build unit-testing-using-dotnet-test
 
       - name: MyTest
         run: dotnet test unit-testing-using-dotnet-test /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
