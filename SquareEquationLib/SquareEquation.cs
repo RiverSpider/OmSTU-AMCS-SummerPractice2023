@@ -19,7 +19,7 @@ public class SquareEquation
             return solve2;
         } 
         else {
-            solve3[0] = -( b + (b==0?1:Math.Sign(b)) * Math.Sqrt(d) )/2;
+            solve3[0] = -( b + Math.Sqrt(d) )/2;
             solve3[1] = c/solve3[0];
             return solve3;
         }
