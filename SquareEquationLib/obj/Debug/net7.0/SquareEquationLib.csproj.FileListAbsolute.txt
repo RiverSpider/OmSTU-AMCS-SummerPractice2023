@@ -1,0 +1,12 @@
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.deps.json
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.pdb
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/SquareEquationLib.csproj.AssemblyReference.cache
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/SquareEquationLib.GeneratedMSBuildEditorConfig.editorconfig
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/SquareEquationLib.AssemblyInfoInputs.cache
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/SquareEquationLib.AssemblyInfo.cs
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/SquareEquationLib.csproj.CoreCompileInputs.cache
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/SquareEquationLib.dll
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/refint/SquareEquationLib.dll
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/SquareEquationLib.pdb
+/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/Debug/net7.0/ref/SquareEquationLib.dll

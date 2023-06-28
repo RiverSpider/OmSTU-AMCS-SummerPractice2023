@@ -1,0 +1,154 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/riverspider/OmSTU-AMCS-SummerPractice2023/Task6.Tests/Task6.Tests.csproj": {}
+  },
+  "projects": {
+    "/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/SquareEquationLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/SquareEquationLib.csproj",
+        "projectName": "SquareEquationLib",
+        "projectPath": "/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/SquareEquationLib.csproj",
+        "packagesPath": "/home/riverspider/.nuget/packages/",
+        "outputPath": "/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/riverspider/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/riverspider/OmSTU-AMCS-SummerPractice2023/Task6.Tests/Task6.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/riverspider/OmSTU-AMCS-SummerPractice2023/Task6.Tests/Task6.Tests.csproj",
+        "projectName": "Task6.Tests",
+        "projectPath": "/home/riverspider/OmSTU-AMCS-SummerPractice2023/Task6.Tests/Task6.Tests.csproj",
+        "packagesPath": "/home/riverspider/.nuget/packages/",
+        "outputPath": "/home/riverspider/OmSTU-AMCS-SummerPractice2023/Task6.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/riverspider/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/SquareEquationLib.csproj": {
+                "projectPath": "/home/riverspider/OmSTU-AMCS-SummerPractice2023/SquareEquationLib/SquareEquationLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.9.74, )"
+            },
+            "SpecFlow.xUnit": {
+              "target": "Package",
+              "version": "[3.9.74, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "coverlet.msbuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

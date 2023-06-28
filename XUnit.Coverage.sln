@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeService.Tests", "Prime
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "square_equation", "SquareEquationLib\SquareEquationLib.csproj", "{DA806470-265E-42BE-9EFF-E889AF2913CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task6.Tests", "Task6.Tests\Task6.Tests.csproj", "{383714B6-4232-411C-AF14-A0C733D7C0DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{DA806470-265E-42BE-9EFF-E889AF2913CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA806470-265E-42BE-9EFF-E889AF2913CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA806470-265E-42BE-9EFF-E889AF2913CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383714B6-4232-411C-AF14-A0C733D7C0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383714B6-4232-411C-AF14-A0C733D7C0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383714B6-4232-411C-AF14-A0C733D7C0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383714B6-4232-411C-AF14-A0C733D7C0DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
