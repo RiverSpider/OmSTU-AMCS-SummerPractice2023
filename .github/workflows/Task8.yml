@@ -1,0 +1,30 @@
+name: SpaceBattle Tests
+
+on:
+  push:
+    branches: ["Task8/Solution"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET7
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 7.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore spacebattle
+
+      - name: Test Build
+        run: dotnet build spacebattle --no-restore /p:ContinuousIntegrationBuild=true
+
+      - name: Move Test
+        run: dotnet test spacebattletestsMove /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
+      - name: Fuel Test
+        run: dotnet test spacebattletestsFuel /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
+      - name: Turn Test
+        run: dotnet test spacebattletestsTurn /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
