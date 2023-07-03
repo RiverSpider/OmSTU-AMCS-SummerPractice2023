@@ -47,7 +47,7 @@ class Program
         double highestGPA = students.Max(s => s.Mark);
         var studentsWithHighestGPA = students
             .Where(s => s.Mark == highestGPA)
-            .Select(s => new { Cadet = s.Name, GPA = s.Mark.ToString("0.##") })
+            .Select(s => new { Cadet = s.Name, GPA = Math.Round(s.Mark, 2) })
             .Distinct()
             .ToList<dynamic>();
 
@@ -58,7 +58,7 @@ class Program
     {
         var averageMarksByDiscipline = students
         .GroupBy(s => s.Discipline)
-        .Select(g => new JObject(new JProperty(g.Key, g.Average(s => s.Mark))))
+        .Select(g => new JObject(new JProperty(g.Key, Math.Round(g.Average(s => s.Mark), 2))))
         .ToList<dynamic>();
 
         return averageMarksByDiscipline;
@@ -72,13 +72,13 @@ class Program
         {
             Discipline = g.Key.Discipline,
             Group = g.Key.Group,
-            GPA = g.Average(s => s.Mark)
+            GPA = Math.Round(g.Average(s => s.Mark), 2)
         })
         .GroupBy(g => g.Discipline)
         .Select(g => new JObject(
             new JProperty("Discipline", g.Key),
             new JProperty("Group", g.OrderByDescending(gg => gg.GPA).FirstOrDefault()?.Group),
-            new JProperty("GPA", g.Max(gg => gg.GPA))
+            new JProperty("GPA", Math.Round(g.Max(gg => gg.GPA), 2))
         ))
         .ToList<dynamic>();
 
