@@ -9,7 +9,7 @@ namespace Task6.Tests
         private double _a;
         private double _b;
         private double _c;
-        private double[] _result = new double[2];
+        private Lazy<double[]> _result = default!;
         public Нахождение_корней(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
@@ -88,39 +88,36 @@ namespace Task6.Tests
         [When(@"вычисляются корни квадратного уравнения")]
         public void вычисляются_корни_квадратного_уравнения()
         {
-            try{
-            _result = SquareEquation.Solve(_a, _b, _c);
-            }
-            catch{
-            }
+            _result = new Lazy<double[]>(() => SquareEquation.Solve(_a, _b, _c));
+
         }
        [Then(@"квадратное уравнение имеет два корня \((.*), (.*)\) кратности один")]
         public void ТоКвадратноеУравнениеИмеетДваКорняКратностиОдин(double p0, double p1)
         {
             double[] expected = {p0, p1};
             Array.Sort(expected);
-            Array.Sort(_result);
-            Assert.Equal(expected, _result);
+            Array.Sort(_result.Value);
+            Assert.Equal(expected, _result.Value);
         }
 
         [Then(@"квадратное уравнение имеет один корень (.*) кратности два")]
          public void ТоКвадратноеУравнениеИмеетОдинКореньКратностиДва(double p0)
          {
             double[] expected = {p0};
-            Assert.Equal(expected, _result);
+            Assert.Equal(expected, _result.Value);
          }
 
          [Then(@"множество корней квадратного уравнения пустое")]
          public void ТоМножествоКорнейКвадратногоУравненияПустое()
          {
             double[] expected = {};
-            Assert.Equal(expected, _result);
+            Assert.Equal(expected, _result.Value);
          }
 
          [Then(@"выбрасывается исключение ArgumentException")]
          public void ТоВыбрасываетсяИсключениеArgumentException()
          {
-            Assert.Throws<System.ArgumentException>(() => SquareEquation.Solve(_a, _b, _c));
+            Assert.Throws<System.ArgumentException>(() => _result.Value);
          }
     }
 }
