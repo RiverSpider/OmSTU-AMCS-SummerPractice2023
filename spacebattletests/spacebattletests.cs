@@ -11,7 +11,7 @@ public class ИгровойОбъектМожетПеремещатьсяПоП�
     private bool _isAllowToMove = true;
     private bool _IsSpeed = true;
     private bool _IsPosition = true; 
-    private double[] _result = new double[2];
+    private Lazy<double[]> _result = default!;
     public ИгровойОбъектМожетПеремещатьсяПоПрямой(ScenarioContext scenarioContext)
     {
         _scenarioContext = scenarioContext;
@@ -51,22 +51,19 @@ public class ИгровойОбъектМожетПеремещатьсяПоП�
     [When(@"происходит прямолинейное равномерное движение без деформации")]
     public void ПроисходитПрямолинейноеРавномерноеДвижениеБезДеформации()
     {
-        try{
-        _result = ShipMove.ShipMoving(_start, _finish, _isAllowToMove, _IsPosition, _IsSpeed);
-        }
-        catch{}
+        _result = new Lazy<double[]>(() => ShipMove.ShipMoving(_start, _finish, _isAllowToMove, _IsPosition, _IsSpeed));
     }
 
     [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
     public void КосмическийКорабльПеремещаетсяВТочкуПространстваСКоординатами(double p0, double p1)
     {
         double[] expected = {p0, p1};
-        Assert.Equal(expected, _result);
+        Assert.Equal(expected, _result.Value);
     }
 
     [Then(@"возникает ошибка Exception")]
     public void ВозникаетОшибкаException ()
     {
-        Assert.Throws<Exception>(() => ShipMove.ShipMoving(_start, _finish, _isAllowToMove, _IsPosition, _IsSpeed));
+        Assert.Throws<Exception>(() => _result.Value);
     }
 }}
